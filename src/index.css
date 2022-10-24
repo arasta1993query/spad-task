@@ -9,5 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #F1F1F1;
+  direction: rtl;
 }
 
