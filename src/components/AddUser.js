@@ -1,6 +1,14 @@
+import {useParams} from "react-router-dom";
+
 const AddUser = () => {
+
+    const {id} = useParams()
+
+    console.log(id)
+
+
     return (
-        <>
+        <div className="mt-5">
             <label className="flex justify-between item-center mb-3">
                 <div className="basis-1/3 text-[#747474] self-center text-xs">Name:</div>
                 <input className="basis-2/3 w-full border border-[#CECECE] rounded-md h-[28px]" type="text"/>
@@ -36,7 +44,7 @@ const AddUser = () => {
                 <button className="py-1 px-6 text-white rounded-md bg-[#FF5050] font-bold">back</button>
                 <button className="py-1 px-6 text-white rounded-md bg-[#57EFDD] font-bold">save</button>
             </div>
-        </>
+        </div>
     )
 }
 
