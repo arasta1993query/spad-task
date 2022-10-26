@@ -2,6 +2,7 @@ import './App.css';
 import Search from "./components/Search";
 import Users from "./components/Users";
 import AddUser from "./components/AddUser";
+import CheckUser from "./components/CheckUser";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Search />
         <Users/>
         <AddUser />
+        <CheckUser />
     </div>
   );
 }
