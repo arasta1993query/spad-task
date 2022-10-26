@@ -98,15 +98,22 @@ const initialState = {
     currentUser: {}
 }
 
-createAction('addUser', user => user)
+createAction('addUser')
 createAction('editUser', user => user)
 
-const usersReducer = createReducer({...initialState},
-    (builder) => {
-        builder.addCase(addUser , (state, action) => {
-            console.log(action)
+const usersReducer = createReducer({...initialState},{
+    addUser: (state, action) => {
+        console.log('test', action)
+    },
+    editUser: (state, action) => {
+        console.log('test1', action)
+        const index = state.users.findIndex(user => {
+            return user.id.title === action.payload.id.title
         })
+        console.log(state , action.payload)
+        state.users[index] = {...action.payload}
+
     }
-)
+})
 
 export default usersReducer
