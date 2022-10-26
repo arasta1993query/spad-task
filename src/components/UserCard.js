@@ -53,9 +53,9 @@ const UserCard = (props) => {
                 </div>
             </div>
             <Link to={`/check/${props.user.id.title}`} className="absolute bottom-1.5 right-1.5 py-1 px-5 font-bold text-xs text-white bg-[#57EFDD] rounded-md">check</Link>
-            <div className="absolute right-[26px] top-1">
+            <Link className="absolute right-[26px] top-1" to={`/edit/${props.user.id.title}`}>
                 <img src="/svg/edit.svg" alt=""/>
-            </div>
+            </Link>
             <input className="absolute top-1 right-1" type="checkbox" />
         </div>
     )
