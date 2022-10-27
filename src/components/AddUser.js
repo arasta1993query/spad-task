@@ -5,7 +5,7 @@ const AddUser = () => {
 
 
     return (
-        <UserForm />
+        <UserForm save="addUser" />
     )
 }
 

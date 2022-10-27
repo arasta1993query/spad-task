@@ -103,10 +103,12 @@ createAction('editUser', user => user)
 
 const usersReducer = createReducer({...initialState},{
     addUser: (state, action) => {
-        console.log('test', action)
+        state.users = [
+            ...state.users,
+            action.payload
+        ]
     },
     editUser: (state, action) => {
-        console.log('test1', action)
         const index = state.users.findIndex(user => {
             return user.id.title === action.payload.id.title
         })
